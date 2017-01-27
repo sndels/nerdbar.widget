@@ -1,6 +1,18 @@
-command: "echo $(/usr/local/bin/ytc current)"
+###
+Heavily modified to support spotify
+###
 
-refreshFrequency: 1000 # ms
+
+command: """echo 'tell application "Spotify"
+        set cTrack to current track
+        set sArtist to artist of cTrack
+        set sName to name of cTrack
+        set pState to player state
+        return pState & sArtist & sName
+    end tell' | osascript
+"""
+
+refreshFrequency: 5000 # ms
 
 render: (output) ->
   """
@@ -12,18 +24,15 @@ render: (output) ->
   """
 
 update: (output, el) ->
-    $(".np span:first-child", el).text("  #{output}")
+    info = output.split(", ");
+    $(".np span:first-child", el).text("  #{info[1] + " - " + info[2]}")
     $icon = $(".np span.icon", el)
     $icon.removeClass().addClass("icon")
-    $icon.addClass("fa #{@icon(output)}")
+    $icon.addClass("fa #{@icon(info[0])}")
 
 icon: (status) =>
-    return if status.substring(0, 9) == "[stopped]"
-        "fa-stop-circle-o"
-    else if status.substring(0, 8) == "[paused]"
+    return if status.substring(0, 6) == "paused"
         "fa-pause-circle-o"
-    else if status.substring(0, 17) == "Connection failed"
-        "fa-times-circle-o"
     else
         "fa-play-circle-o"
 
