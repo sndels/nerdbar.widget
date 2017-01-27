@@ -34,6 +34,6 @@ style: """
   -webkit-font-smoothing: antialiased
   font: 12px Input
   top: 6px
-  right: 195px
+  right: 190px
   color: #c0c0c0
 """
