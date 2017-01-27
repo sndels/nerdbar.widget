@@ -19,12 +19,13 @@ update: (output, el) ->
 
 style: """
   -webkit-font-smoothing: antialiased
-  color: #d5c4a1
-  font: 10px Input
+  color: #c0c0c0
+  font: 12px Input
   height: 16px
   left: 10px
   overflow: hidden
+  white-space: nowrap
   text-overflow: ellipsis
   top: 6px
-  width: auto
+  width: 498px
 """

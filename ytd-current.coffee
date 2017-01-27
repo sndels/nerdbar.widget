@@ -30,8 +30,8 @@ icon: (status) =>
 style: """
   -webkit-font-smoothing: antialiased
   text-align: center
-  color: #d5c4a1
-  font: 10px Input
+  color: #c0c0c0
+  font: 12px Input
   height: 16px
   left: 25%
   overflow: hidden

@@ -35,7 +35,7 @@ style: """
   -webkit-font-smoothing: antialiased
   text-align: right
   color: #d5c4a1
-  font: 10px Input
+  font: 12px Input
   height: 16px
   overflow: hidden
   text-overflow: ellipsis
