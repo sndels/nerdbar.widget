@@ -1,4 +1,4 @@
-command: "ESC=`printf \"\e\"`; ps -A -o %mem | awk '{s+=$1} END {print \"\" s}'"
+command: "ESC=`printf \"\e\"`; ps -A -o %mem | awk '{s+=$1} END {printf(\"%.1f\",s);}'"
 
 refreshFrequency: 30000 # ms
 
