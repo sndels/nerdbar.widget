@@ -2,7 +2,7 @@
 
 Personal [Übersicht](http://tracesof.net/uebersicht/) system information bar for use with [Kwm](https://github.com/koekeishiya/kwm) window manager.
 Originally created by [herrbischoff](https://github.com/herrbischoff) and modified by [koekeishiya](https://github.com/koekeishiya).
-This fork contains my tweaks for 13" MBAir plus a spotify display and keyboard layout indicator.
+This fork contains my tweaks for 13" MBAir plus a spotify display, keyboard layout indicator and wifi-indicator.
 
 ![Screenshot](screenshot.png)
 
@@ -13,8 +13,8 @@ fork by *koekeishiya* [here](https://github.com/koekeishiya/nerdbar.widget).
 
 Make sure you have [Übersicht](http://tracesof.net/uebersicht/) installed.
 
-Then copy the contents of this repo to
+Then clone this repo to the widgets folder:
 
 ```
- $HOME/Library/Application\ Support/Übersicht/widgets/
+git clone https://github.com/sndels/nerdbar.widget $HOME/Library/Application\ Support/Übersicht/widgets/nerdbar.widget
 ```
