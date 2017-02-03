@@ -21,7 +21,7 @@ style: """
   -webkit-font-smoothing: antialiased
   color: #c0c0c0
   font: 12px Input
-  right: 315px
+  right: 320px
   width: 55px
   top: 6px
 """
