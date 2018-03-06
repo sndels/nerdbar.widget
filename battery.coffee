@@ -1,6 +1,6 @@
 command: "pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d';'"
 
-refreshFrequency: 15000 # ms
+refreshFrequency: 30000 # ms
 
 render: (output) ->
   """
@@ -33,7 +33,7 @@ icon: (output) =>
 style: """
   -webkit-font-smoothing: antialiased
   font: 12px Input
-  top: 6px
+  top: 4px
   right: 220px
   width: 50px
   color: #c0c0c0

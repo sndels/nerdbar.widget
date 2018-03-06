@@ -1,4 +1,4 @@
-command: "ESC=`printf \"\e\"`; ps -A -o %mem | awk '{s+=$1} END {printf(\"%.1f\",s);}'"
+command: "ps -A -o %mem | awk '{s+=$1} END {printf \"%.1f\", s}'"
 
 refreshFrequency: 30000 # ms
 
@@ -12,7 +12,7 @@ render: (output) ->
   """
 
 update: (output, el) ->
-    $(".mem span:first-child", el).text("  #{output}")
+    $(".mem span:first-child", el).text("  #{output.substring(0, 4)}")
     $icon = $(".mem span.icon", el)
     $icon.removeClass().addClass("icon")
     $icon.addClass("fa fa-hdd-o")
@@ -21,7 +21,7 @@ style: """
   -webkit-font-smoothing: antialiased
   color: #c0c0c0
   font: 12px Input
-  right: 270px
+  right: 268px
   width: 50px
-  top: 6px
+  top: 4px
 """

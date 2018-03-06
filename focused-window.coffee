@@ -26,6 +26,6 @@ style: """
   overflow: hidden
   white-space: nowrap
   text-overflow: ellipsis
-  top: 6px
+  top: 4px
   width: 498px
 """

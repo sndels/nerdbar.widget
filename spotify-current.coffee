@@ -12,7 +12,7 @@ command: """echo 'tell application "Spotify"
     end tell' | osascript
 """
 
-refreshFrequency: 5000 # ms
+refreshFrequency: 10000 # ms
 
 render: (output) ->
   """
@@ -45,6 +45,6 @@ style: """
   left: 25%
   overflow: hidden
   text-overflow: ellipsis
-  top: 6px
+  top: 4px
   width: 50%
 """

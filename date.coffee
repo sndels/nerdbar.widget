@@ -23,5 +23,5 @@ style: """
   font: 12px Input
   right: 85px
   width: 85px
-  top: 6px
+  top: 4px
 """

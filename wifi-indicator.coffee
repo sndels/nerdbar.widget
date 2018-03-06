@@ -1,6 +1,4 @@
-command: "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | \
-egrep 'state: *' | \
-sed -E 's/.*(: )//'"
+command: "curl -s google.com &> /dev/null; echo $?"
 
 refreshFrequency: 10000 # ms
 
@@ -20,7 +18,7 @@ update: (output, el) ->
     $icon.addClass("fa #{@icon(output)}")
 
 icon: (status) =>
-    return if status.substring(0, 7) == "running"
+    return if status == "0\n"
         "fa-wifi"
     else
         "fa-times"
@@ -30,5 +28,5 @@ style: """
   color: #c0c0c0
   font: 12px Input
   right: 10px
-  top: 6px
+  top: 4px
 """
